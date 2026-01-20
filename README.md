@@ -32,6 +32,12 @@ to run tests:
 ginkgo
 ```
 
+to get detailed output:
+
+```
+ginko -v
+```
+
 ## Troubleshooting:
 
 to fix error like this:
@@ -43,5 +49,13 @@ run:
 ```
 go mod tidy
 ```
+## Logging
 
-https://onsi.github.io/ginkgo/#mental-model-how-ginkgo-handles-failure# ginkgo-sample
+Out-of-box tool: `GinkgoWriter` Sample:
+
+```
+GinkgoWriter.Println(data)
+```
+
+https://onsi.github.io/ginkgo/#mental-model-spec-timelines
+

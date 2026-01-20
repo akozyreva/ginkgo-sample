@@ -2,7 +2,6 @@ package api_test
 
 import (
 	"encoding/json"
-	"fmt"
 	"ginkgo-sample/tests/api"
 	"io"
 	"log"
@@ -23,7 +22,7 @@ var _ = Describe("WeatherLatitude", func() {
 			if err := json.Unmarshal(body, &data); err != nil {
 				log.Fatal(err)
 			}
-			fmt.Println(data)
+			GinkgoWriter.Println(data)
 			expLatitude, ok := data["latitude"].(float64)
 			Expect(ok).To(Equal(true), "Expected that in resp body there's param latitude")
 			Expect(expLatitude).To(Equal(52.52))

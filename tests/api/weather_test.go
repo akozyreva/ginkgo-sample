@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"ginkgo-sample/tests/api"
+
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
@@ -54,7 +55,17 @@ var _ = Describe("Wetter API common check", func() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			fmt.Println(string(body))
+			GinkgoWriter.Println(string(body))
+		})
+	})
+
+	Context("Wne you set fail explicitly", func() {
+		It("Test will fail always ", func() {
+			Fail("This test fails")
+		})
+
+		It("This test won't be executed, because previous one failed ", func() {
+			Expect(true).To(BeTrue())
 		})
 	})
 
