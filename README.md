@@ -38,6 +38,18 @@ to get detailed output:
 ginko -v
 ```
 
+to run tests in parallel:
+
+```
+ginkgo -p
+```
+
+to get junit.xml report:
+
+```
+ginkgo --junit-report=report.xml
+```
+
 ## Troubleshooting:
 
 to fix error like this:
@@ -57,5 +69,6 @@ Out-of-box tool: `GinkgoWriter` Sample:
 GinkgoWriter.Println(data)
 ```
 
-https://onsi.github.io/ginkgo/#mental-model-spec-timelines
+https://onsi.github.io/ginkgo
+
 
